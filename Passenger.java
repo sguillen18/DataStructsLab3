@@ -1,7 +1,18 @@
 package Lab3;
 
 public class Passenger {
-	String id;
-	String destination;
+	private String id;
+	private String destination;
+	
+	public Passenger(String id, String destination) {
+		this.id = id;
+		this.destination = destination;
+	}
+	
+	public String getPassInfo() {
+		return id + ", " + destination;
+	}
+	
+	
 
 }
