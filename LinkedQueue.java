@@ -24,9 +24,9 @@ public class LinkedQueue <T> implements QueueInterface <T> {
 			return data;
 		}
 		
-		public void setData(T newData) {
+		/*public void setData(T newData) {
 			data = newData;
-		}
+		}*/
 		
 		public Node getNext() {
 			return next;

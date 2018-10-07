@@ -27,6 +27,15 @@ public class TestQueue {
 			System.out.println ("Could not get front of empty queue");
 		}
 		
+		Route r = new Route();
+		r.main();
+		
+		Station[] s = r.getStationArray();
+		
+		for(int j = 0; j < 16; j++) {
+			System.out.println(s[j].printStationInfo());
+		}
+		
 	}
 
 }

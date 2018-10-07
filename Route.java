@@ -2,7 +2,7 @@ package Lab3;
 
 
 public class Route {
-	Station [] stations;
+	private Station [] stations = new Station[17];
 	
 	public Route() {
 		
@@ -18,7 +18,7 @@ public class Route {
 	}
 	
 	public int randStation() {
-		int num = (int) (Math.random()* 17) + 1;
+		int num = (int) (Math.random()* 17);
 		return num;
 	}
 	
@@ -43,30 +43,40 @@ public class Route {
 		Station fh = new Station("Forest Hill", null);
 		
 		//adds to array
-		stations[1] = og;
-		stations[2] = w;
-		stations[3] = a;
-		stations[4] = ss;
-		stations[5] = cc;
-		stations[6] = h;
-		stations[7] = dc;
-		stations[8] = c;
-		stations[9] = tmc;
-		stations[10] = bb;
-		stations[11] = ma;
-		stations[12] = r;
-		stations[13] = rc;
-		stations[14] = js;
-		stations[15] = sb;
-		stations[16] = gs;
-		stations[17] = fh;
+		stations[0] = og;
+		stations[1] = w;
+		stations[2] = a;
+		stations[3] = ss;
+		stations[4] = cc;
+		stations[5] = h;
+		stations[6] = dc;
+		stations[7] = c;
+		stations[8] = tmc;
+		stations[9] = bb;
+		stations[10] = ma;
+		stations[11] = r;
+		stations[12] = rc;
+		stations[13] = js;
+		stations[14] = sb;
+		stations[15] = gs;
+		stations[16] = fh;
 		
 		for(int i = 0; i < 30; i++) {
 			String id = randID();
-			String stat = stations[randStation()].getName();
-			Passenger p = new Passenger(id, );
+			int num = randStation();
+			Station s = stations[num];
+			String stat = s.getName();
+			Passenger p = new Passenger(id, stat);
+
+			LinkedQueue <Passenger> copyList = s.getPassList();
+			copyList.enqueue(p);
+			s.setPassList(copyList);
 		}
 		
 		
+	}
+	
+	public Station[] getStationArray() {
+		return stations;
 	}
 }
