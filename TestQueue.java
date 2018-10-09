@@ -36,6 +36,19 @@ public class TestQueue {
 			System.out.println(s[j].printStationInfo());
 		}
 		
+		/*LinkedQueue<Passenger> hi = new LinkedQueue <Passenger> ();
+		Passenger p1 = new Passenger("12345", "Shawn");
+		Passenger p2 = new Passenger("12346", "Penguin");
+		Passenger p3 = new Passenger("12347", "Igloo");
+		hi.enqueue(p1);
+		hi.enqueue(p2);
+		hi.enqueue(p3);
+		Station fred = new Station("Fred", hi);
+		
+		System.out.println(fred.printStationInfo());
+		System.out.println(fred.listOfPass());*/
+		
+		
 	}
 
 }

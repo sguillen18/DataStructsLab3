@@ -11,18 +11,18 @@ public class Station {
 	
 	public String listOfPass() {
 		LinkedQueue <Passenger> copy = passengers;
-		String list = "";
+		String list = " ";
 		
 		while(!copy.isEmpty()) {
 			list += copy.dequeue().getPassInfo();
-			list += "\n";
+			list += "\n ";
 		}
 		
 		return list;
 	}
 	
 	public String printStationInfo() {
-		return name + " \n  Passengers: \n \n" + listOfPass();
+		return name + " \nPassengers: \n" + listOfPass();
 	}
 	
 	public String getName() {

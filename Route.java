@@ -61,7 +61,12 @@ public class Route {
 		stations[15] = gs;
 		stations[16] = fh;
 		
-		for(int i = 0; i < 30; i++) {
+		for(int j = 0; j < 17; j++) {
+			LinkedQueue <Passenger> pa = new LinkedQueue <Passenger> ();
+			stations[j].setPassList(pa);
+		}
+		
+		for(int i = 0; i < 60; i++) {
 			String id = randID();
 			int num = randStation();
 			Station s = stations[num];

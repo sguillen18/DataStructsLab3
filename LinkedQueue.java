@@ -47,7 +47,6 @@ public class LinkedQueue <T> implements QueueInterface <T> {
 		
 		if(isEmpty()) {
 			firstNode = newNode;
-			lastNode = newNode;
 		}
 		
 		else {
